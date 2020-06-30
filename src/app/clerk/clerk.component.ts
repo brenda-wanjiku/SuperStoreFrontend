@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-clerk',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClerkComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+
+  constructor(
+    private router: Router,
+    private userService: UserService,
+   
+  ) { }
+
+  ngOnInit():void {
+   
+
+  }
+
+
+  logout() {
+    this.userService.purgeAuth();
+    this.router.navigateByUrl('/');
   }
 
 }
