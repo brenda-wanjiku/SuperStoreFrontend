@@ -24,7 +24,7 @@
                 </div>
             </div>
             <h5 class="card-title">Clerk</h5>
-            <h5 class="card-title">Management</h5>
+
         </a>
     </li>
 
@@ -80,66 +80,31 @@
     <h1>Manager</h1>
     <hr>
 
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card products">
-                <div class="card-body">
-                    <img src="assets/images/basket.png" width="60px">
-                    <h5 class="card-title">Total Products</h5>
-                    <p class="card-text">10</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card sales">
-
-                <div class="card-body">
-                    <img src="assets/images/sale.png" width="60px">
-                    <h5 class="card-title">Total Sales</h5>
-                    <p class="card-text">20</p>
-
-                </div>
-            </div>
-        </div>
 
 
-        <div class="col-md-4">
-            <div class="card products">
-                <div class="card-body">
-                    <img src="assets/images/store.png" width="60px">
-                    <h5 class="card-title">Store</h5>
-                    <p class="card-text">5</p>
-
-                </div>
-            </div>
-        </div>
-
-    </div>
     <div class="container">
-        <h3>Inventory</h3>
-        <div style="display: block;">
-            <canvas baseChart 
-            [data]  ="doughnutChartData"
-            [labels]    ="doughnutChartLabels"
-            [chartType]   ="doughnutChartType"></canvas>
-        </div>
-        <h3 style="padding: auto;">Purchases and Sales</h3>
-        <div style="display: block;">
-            <canvas baseChart 
-            [datasets]  ="barChartData"
-            [labels]    ="barChartLabels"
-            [options]   ="barChartOptions"
-            [legend]    ="barChartLegend"
-            [chartType] ="barChartType">
+
+        <h1 style="padding: auto;">Purchases and Sales</h1>
+        <div  class="barChart" style="display: block;">
+            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                [legend]="barChartLegend" [chartType]="barChartType">
             </canvas>
         </div>
+
+
+        <h1>Inventory</h1>
+        <div class="doughnut" style="display: block;">
+            <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels"
+                [chartType]="doughnutChartType"></canvas>
+        </div>
+
+
+       
+
+
         <h3>Payment</h3>
         <div style="display: block">
-            <canvas baseChart
-            [data]      ="pieChartData"
-            [labels]    ="pieChartLabels"
-            [chartType] ="pieChartType">
+            <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType">
             </canvas>
         </div>
 

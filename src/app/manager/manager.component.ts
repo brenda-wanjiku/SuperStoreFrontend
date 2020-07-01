@@ -23,7 +23,7 @@ export class ManagerComponent implements OnInit {
 
   public doughnutChartLabels = ['clothing', 'stationery', 'hardware', 'confectionery'];
 
-  public doughnutChartData = [150000, 120000, 90000, 200000];
+  public doughnutChartData = [150, 120, 900, 200];
 
   public doughnutChartType = 'doughnut';
 
@@ -33,6 +33,9 @@ export class ManagerComponent implements OnInit {
     responsive: true,
 
   };
+
+
+
   public barChartLabels = ['Jan', 'Feb', 'March', 'April', 'June'];
   public barChartType = 'bar';
   public barChartLegend = true;

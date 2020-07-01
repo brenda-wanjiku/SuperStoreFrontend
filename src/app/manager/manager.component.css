@@ -1,4 +1,14 @@
+.doughnut{
+  width: 800px;
+  height: 800px;
+  }
 
+.barChart{
+  width: 800px;
+  height: 800px;
+  margin-left: 100px;
+}
+  
   ul {
     list-style-type: none;
     margin: 0;
